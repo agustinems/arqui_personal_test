@@ -1,0 +1,16 @@
+# General
+.DS_Store
+
+# Environment files
+.env
+backend_xd/.env
+
+# Node modules
+frontend_xd/node_modules/
+
+# Compiled binaries
+backend_xd/gimnasio_app
+
+# Databases
+backend_xd/*.sqlite
+

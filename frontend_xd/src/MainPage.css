@@ -28,6 +28,17 @@
 .error {
   color: red;
 }
+
+.detail input {
+  display: block;
+  margin: 0.5rem 0;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.detail button {
+  margin-right: 0.5rem;
+}
 9evkb5-codex/crear-frontend-página-main
 
 44qji1-codex/crear-frontend-página-main
