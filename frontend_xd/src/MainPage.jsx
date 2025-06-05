@@ -5,7 +5,10 @@ import './MainPage.css';
 function MainPage() {
   const [activities, setActivities] = useState([]);
   const [error, setError] = useState(null);
+44qji1-codex/crear-frontend-página-main
   const [selected, setSelected] = useState(null);
+
+ main
 
   useEffect(() => {
     axios.get('http://localhost:8000/actividades')
@@ -18,6 +21,7 @@ function MainPage() {
       });
   }, []);
 
+44qji1-codex/crear-frontend-página-main
   const fetchActivity = (id) => {
     axios.get(`http://localhost:8000/actividad/${id}`)
       .then((response) => {
@@ -29,6 +33,8 @@ function MainPage() {
       });
   };
 
+
+ main
   return (
     <div className="main-container">
       <h1>Actividades</h1>
@@ -45,6 +51,7 @@ function MainPage() {
             <p>
               <strong>Cupo:</strong> {act.cupo}
             </p>
+44qji1-codex/crear-frontend-página-main
             <button type="button" onClick={() => fetchActivity(act.id)}>
               Ver detalles
             </button>
@@ -67,6 +74,10 @@ function MainPage() {
           </p>
         </div>
       )}
+          </div>
+        ))}
+      </div>
+ main
     </div>
   );
 }
