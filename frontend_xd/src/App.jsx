@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './Login.jsx';
+import MainPage from './MainPage.jsx';
+import './App.css';
 
 function App() {
-
   return (
-    <>
+    <Router>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/user" element={<User />} />
+        <Route path="/main" element={<MainPage />} />
       </Routes>
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
