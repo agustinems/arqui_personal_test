@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -22,8 +24,7 @@ const Login = () => {
       // Guardar token en localStorage
       localStorage.setItem("token", response.data.token);
 
-      // (Opcional) Redirigir a otra página después del login
-      // window.location.href = "/home"; // o usá navigate si tenés react-router
+      navigate('/main');
     } catch (error) {
       console.error("Error al hacer login:", error);
       if (error.response && error.response.status === 401) {
