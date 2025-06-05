@@ -10,7 +10,8 @@ func MapRoutes() {
 	// Rutas públicas
 	Router.POST("/login", handlers.LoginHandler)
 	Router.GET("/actividades", activities.GetAllActivities)
-	Router.GET("/actividad/:id", activities.GetActivityByID)
+        Router.GET("/actividad/:id", activities.GetActivityByID)
+        Router.PUT("/actividad/:id", activities.UpdateActivity)
 
 	// // Rutas de inscripción (se asume usuario logueado, pero sin middleware por ahora)
 	// Router.POST("/inscribirse/:id", handlers.InscribirseActividad)
